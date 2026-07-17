@@ -1,16 +1,29 @@
- class Students {
-    int id;
+class Student{
     String name;
+    int age;
+    // NORMAL 
+    // Student(){
+    //     name = "John Doe";
+    //     age = 20;
+    // }
+    Student(String n, int a){
+        this.name = n;
+        this.age = a;
+    }
+    Student(Student obj2)
+    {
+        this.name = obj2.name;
+        this.age = obj2.age;
+    }
 
-    public static void main(String[] args) {
-        Students s1 = new Students();
-        s1.id = 1;
-        s1.name = "John Doe";
-        Students s2 = new Students();
-        s2.id =2;
-        s2.name = "Alice";
-        System.out.println("Student ID: " + s1.id + ", Name: " + s1.name);
-        System.out.println("Student ID: " + s2.id + ", Name: " + s2.name);
-    
+    void display(){
+        System.out.println("Name: " + name + ", Age: " + age);
     }
 }
+public class Main{
+    public static void main(String[] args) {
+        Student student1 = new Student("Alice", 20);
+        student1.display();
+    }
+}
+
