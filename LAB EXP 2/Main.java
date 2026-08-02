@@ -1,11 +1,11 @@
 class Student{
     String name;
     int age;
-    // NORMAL 
-    // Student(){
-    //     name = "John Doe";
-    //     age = 20;
-    // }
+
+    Student(){
+        name = "John Doe";
+        age = 20;
+    }
     Student(String n, int a){
         this.name = n;
         this.age = a;
@@ -24,6 +24,10 @@ public class Main{
     public static void main(String[] args) {
         Student student1 = new Student("Alice", 20);
         student1.display();
+        Student student2 = new Student(student1);
+        student2.display();
+        Student student3 = new Student();
+        student3.display();
     }
 }
 
