@@ -13,7 +13,7 @@ class Student {
 
 public class Main2 {
     public static void main (String[] args) {
-        Student s = new Student("Alice");
+        Student s = new Student("Akshit");
         s.display();
     }
 }

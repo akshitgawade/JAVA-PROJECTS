@@ -1,7 +1,7 @@
 
 class Shape {
     void display() {
-        System.out.println("Created a new shape!");
+        System.out.println("Created a new shape:");
     }
 }
 
@@ -25,6 +25,6 @@ public class Exp1 {
         c.display();
         System.out.println("Area of Circle : " + c.area(10));
         r.display();
-        System.out.println("Area of Rectangle : " + r.area(10, 10));
+        System.out.println("Area of Rectangle : " + r.area(20, 20));
     }
 }

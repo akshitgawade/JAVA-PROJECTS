@@ -1,4 +1,3 @@
-
 interface Product {
     void displayCategory();
 }
@@ -53,9 +52,9 @@ class Grocery extends ProductDetails implements Product {
 
 public class Exp2 {
     public static void main(String[] args) {
-        Electronic e = new Electronic(101, "Laptop", 65000);
-        Clothing c = new Clothing(102, "T-Shirt", 999);
-        Grocery g = new Grocery(103, "Rice", 1200);
+        Electronic e = new Electronic(201, "Mobile", 45000);
+        Clothing c = new Clothing(202, "Shirt", 999);
+        Grocery g = new Grocery(203, "Milk", 65);
 
         e.displayDetails();
         e.displayCategory();

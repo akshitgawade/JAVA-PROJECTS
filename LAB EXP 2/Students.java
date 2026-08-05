@@ -1,16 +1,33 @@
- class Students {
+class Students {
     int id;
     String name;
 
+    Students() {
+        this.id = 0;
+        this.name = "Unknown";
+    }
+
+    Students(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    Students(Students other) {
+        this.id = other.id;
+        this.name = other.name;
+    }
+
+    void display() {
+        System.out.println("Student ID: " + id + ", Name: " + name);
+    }
+
     public static void main(String[] args) {
         Students s1 = new Students();
-        s1.id = 1;
-        s1.name = "John Doe";
-        Students s2 = new Students();
-        s2.id =2;
-        s2.name = "Alice";
-        System.out.println("Student ID: " + s1.id + ", Name: " + s1.name);
-        System.out.println("Student ID: " + s2.id + ", Name: " + s2.name);
-    
+        Students s2 = new Students(2, "Alice");
+        Students s3 = new Students(s2);
+
+        s1.display();
+        s2.display();
+        s3.display();
     }
 }
