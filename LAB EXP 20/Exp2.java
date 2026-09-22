@@ -8,20 +8,20 @@ public class Exp2 {
             Connection con = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/college2",
                 "root",
-                "devansh@2007"
+                "P@resh123!"
             );
 
             Statement stmt = con.createStatement();
 
             // CREATE - Insert student
             stmt.executeUpdate(
-                "INSERT INTO student VALUES (101, 'Amit', 'Java', 85)"
+                "INSERT INTO student VALUES (318, 'Akshit', 'Data Science', 87)"
             );
             System.out.println("Student inserted successfully.");
 
             // UPDATE - Update marks
             stmt.executeUpdate(
-                "UPDATE student SET marks = 90 WHERE roll_no = 101"
+                "UPDATE student SET marks = 93 WHERE roll_no = 318"
             );
             System.out.println("Student updated successfully.");
 
@@ -43,7 +43,7 @@ public class Exp2 {
 
             // DELETE - Delete student
             stmt.executeUpdate(
-                "DELETE FROM student WHERE roll_no = 101"
+                "DELETE FROM student WHERE roll_no = 318"
             );
             System.out.println("Student deleted successfully.");
 

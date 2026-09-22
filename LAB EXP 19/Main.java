@@ -2,31 +2,30 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
+        String url = "jdbc:mysql://127.0.0.1:3306/college";
+        String user = "root";
+        String password = "P@resh123!";
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/college",
-                "root",
-                "devansh@2007"
-            );
+            try (Connection con = DriverManager.getConnection(url, user, password);
+                 Statement stmt = con.createStatement();
+                 ResultSet rs = stmt.executeQuery("SELECT * FROM student")) {
 
-            Statement stmt = con.createStatement();
+                System.out.println("Student Records:");
 
-            ResultSet rs = stmt.executeQuery("SELECT * FROM student");
-
-            while (rs.next()) {
-                System.out.println(
-                    rs.getInt("id") + " " +
-                    rs.getString("name") + " " +
-                    rs.getString("course")
-                );
+                while (rs.next()) {
+                    System.out.println(
+                        rs.getInt("id") + " " +
+                        rs.getString("name") + " " +
+                        rs.getString("course")
+                    );
+                }
             }
-
-            con.close();
-        }
-        catch (Exception e) {
-            System.out.println(e);
+        } catch (Exception e) {
+            System.err.println("Database error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

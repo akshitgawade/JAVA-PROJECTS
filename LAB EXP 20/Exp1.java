@@ -6,22 +6,22 @@ public class Exp1 {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/company",
+                "jdbc:mysql://localhost:3306/company2",
                 "root",
-                "devansh@2007"
+                "P@resh123!"
             );
 
             Statement stmt = con.createStatement();
 
             // CREATE - Insert employee
             stmt.executeUpdate(
-                "INSERT INTO employee VALUES (101, 'Rahul', 'IT', 50000)"
+                "INSERT INTO employee VALUES (247, 'Akshit', 'Finance', 68500)"
             );
             System.out.println("Employee inserted successfully.");
 
             // UPDATE - Update salary
             stmt.executeUpdate(
-                "UPDATE employee SET salary = 55000 WHERE emp_id = 101"
+                "UPDATE employee SET salary = 73200 WHERE emp_id = 247"
             );
             System.out.println("Employee updated successfully.");
 
@@ -43,7 +43,7 @@ public class Exp1 {
 
             // DELETE - Delete employee
             stmt.executeUpdate(
-                "DELETE FROM employee WHERE emp_id = 101"
+                "DELETE FROM employee WHERE emp_id = 247"
             );
             System.out.println("Employee deleted successfully.");
 

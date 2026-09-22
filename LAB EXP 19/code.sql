@@ -10,9 +10,9 @@ CREATE TABLE student (
 );
 
 INSERT INTO student VALUES
-(1, 'Devansh', 'BCA'),
-(2, 'Rahul', 'BCA'),
-(3, 'Aman', 'BCA');
+(1, 'Akshit', 'CSE'),
+(2, 'Atharva', 'CSE'),
+(3, 'Agam', 'CSE');
 
 USE shop;
 
@@ -24,6 +24,6 @@ CREATE TABLE product (
 );
 
 INSERT INTO product VALUES
-(101, 'Laptop', 5, 55000),
-(102, 'Mouse', 20, 700),
-(103, 'Keyboard', 10, 1200);
+(101, 'Pizza', 15, 250),
+(102, 'Burger', 25, 120),
+(103, 'Pasta', 12, 180);

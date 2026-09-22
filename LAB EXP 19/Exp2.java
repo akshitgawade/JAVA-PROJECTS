@@ -2,36 +2,31 @@ import java.sql.*;
 
 public class Exp2 {
     public static void main(String[] args) {
+        String url = "jdbc:mysql://127.0.0.1:3306/shop";
+        String user = "root";
+        String password = "P@resh123!";
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/shop",
-                "root",
-                "devansh@2007"
-            );
+            try (Connection con = DriverManager.getConnection(url, user, password);
+                 Statement stmt = con.createStatement();
+                 ResultSet rs = stmt.executeQuery("SELECT * FROM product")) {
 
-            Statement stmt = con.createStatement();
+                System.out.println("Product Details:");
 
-            ResultSet rs = stmt.executeQuery(
-                "SELECT * FROM product"
-            );
-
-            System.out.println("Product Details:");
-
-            while (rs.next()) {
-                System.out.println(
-                    "Product ID: " + rs.getInt("product_id") +
-                    ", Name: " + rs.getString("product_name") +
-                    ", Quantity: " + rs.getInt("quantity") +
-                    ", Price: " + rs.getDouble("price")
-                );
+                while (rs.next()) {
+                    System.out.println(
+                        "Product ID: " + rs.getInt("product_id") +
+                        ", Name: " + rs.getString("product_name") +
+                        ", Quantity: " + rs.getInt("quantity") +
+                        ", Price: " + rs.getDouble("price")
+                    );
+                }
             }
-
-            con.close();
-        }
-        catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
