@@ -4,7 +4,7 @@ class InvalidAgeException extends Exception {
     }
 }
 
-public class Exp2 {
+public class Ex2 {
     public static void main(String[] args) {
         int age = 20;
 

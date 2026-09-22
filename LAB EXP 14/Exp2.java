@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 public class Exp2 {
     public static void main (String[] args) {
         int products = 10;
 
         try (Scanner in = new Scanner(System.in)) {
             try {
-                System.out.print("Enter number of products to but : ");
+                System.out.print("Enter number of products to buy : ");
                 int am = in.nextInt();
 
                 if (am < 0) {
