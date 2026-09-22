@@ -3,11 +3,11 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         try {
-            FileWriter fw = new FileWriter("Exp13/data.txt");
+            FileWriter fw = new FileWriter("data.txt");
             fw.write("Hello, this is a Java file handling program.");
             fw.close();
 
-            FileReader fr = new FileReader("Exp13/data.txt");
+            FileReader fr = new FileReader("data.txt");
             BufferedReader br = new BufferedReader(fr);
 
             String line;

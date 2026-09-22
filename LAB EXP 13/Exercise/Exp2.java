@@ -4,7 +4,7 @@ import java.io.*;
 public class Exp2 {
     public static void main (String[] args) {
         try {
-            FileWriter fw = new FileWriter("Exp13/Exercise/patient.txt");
+            FileWriter fw = new FileWriter("Exercise/patient.txt");
 
             fw.write("Patient ID: 101\n");
             fw.write("Name: Amit\n");
@@ -13,7 +13,7 @@ public class Exp2 {
 
             fw.close();
 
-            FileReader fr = new FileReader("Exp13/Exercise/patient.txt");
+            FileReader fr = new FileReader("Exercise/patient.txt");
             BufferedReader br = new BufferedReader(fr);
 
             String line;

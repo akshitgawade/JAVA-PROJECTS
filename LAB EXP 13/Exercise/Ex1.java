@@ -3,7 +3,7 @@ import java.io.*;
 public class Ex1 {
     public static void main (String[] args) {
         try {
-            FileWriter fw = new FileWriter("Exp13/Exercise/employee.txt");
+            FileWriter fw = new FileWriter("Exercise/employee.txt");
 
             fw.write("Employee ID: 101\n");
             fw.write("Name: Rahul\n");
@@ -11,7 +11,7 @@ public class Ex1 {
 
             fw.close();
 
-            FileReader fr = new FileReader("Exp13/Exercise/employee.txt");
+            FileReader fr = new FileReader("Exercise/employee.txt");
             BufferedReader br = new BufferedReader(fr);
 
             String line;
