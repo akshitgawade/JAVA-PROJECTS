@@ -17,3 +17,13 @@ SWING/.vscode/launch.json
 FILE HANDLING/filename.txt
 Java LAB Assignment template.docx
 Java LAB Assignment template.docx
+JGL/acc.java
+
+# Local project folders
+/.vscode/
+/CRUD/
+/FILE HANDLING/
+/HelloWorld/
+/JAVA MATERIAL/
+/JDBC_CRUD/
+/JGL/
